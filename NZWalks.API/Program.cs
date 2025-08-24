@@ -17,6 +17,9 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectio
 // Use this to register SQLRegionRepository 
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
 
+// Use this to register InMemoryRegionRepository
+// builder.Services.AddScoped<IRegionRepository, InMemoryRegionRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
